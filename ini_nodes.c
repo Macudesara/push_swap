@@ -44,7 +44,7 @@ void	set_price(t_stack *a, t_stack *b) //how many moves to bring to the top
 	{
 		b->push_price = b->current_position;
 		if (!(b->above_median))
-			b->push_price = lenb - (b->current_position); // b->push_price += lenb - (b->current_position);
+			b->push_price = lenb - (b->current_position);
 		if (b->target_node->above_median)
 			b->push_price += b->target_node->current_position;
 		else
@@ -61,7 +61,7 @@ void	set_target_node(t_stack *a, t_stack *b)
 
 	while (b)
 	{
-		best_match_index = LONG_MAX; // 9223372036854775807
+		best_match_index = LONG_MAX;
 		current_a = a;
 		while (current_a)
 		{

@@ -6,7 +6,7 @@
 /*   By: macudesarasqueta <macudesarasqueta@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 15:19:17 by mde-sara          #+#    #+#             */
-/*   Updated: 2024/02/01 14:56:01 by macudesaras      ###   ########.fr       */
+/*   Updated: 2024/02/02 13:06:40 by mde-sara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,10 @@ void	algorithm_sort(t_stack **a, t_stack **b)
 	smallest = find_lowest_node(*a);
 	if (smallest->above_median)
 		while (*a != smallest)
-			ra(a);
+			ra(a, 1);
 	else
 		while (*a != smallest)
-			rra(a);
-	// displayStack(*a, 'a');
-	// displayStack(*b, 'b');
+			rra(a, 1);
+	//displayStack(*a, 'a');
+	//displayStack(*b, 'b');
 }

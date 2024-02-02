@@ -20,9 +20,9 @@ void	sort_three(t_stack **a)
         return;
 	highest_node = find_highest_node(*a);
 	if (*a == highest_node)
-		ra(a);
+		ra(a, 1);
 	if ((*a)->next == highest_node)
-		rra(a);
+		rra(a, 1);
 	if ((*a)->value > (*a)->next->value)
 		sa(*a);
 }
@@ -40,9 +40,9 @@ void	sort_four(t_stack **a, t_stack **b)
 			exit(1);
 		min_value = min_node->value;
 		if (min_node == find_last_node(*a))
-			rra(a);
+			rra(a, 1);
 		if ((*a)->value > min_value)
-			ra(a);
+			ra(a, 1);
 		else
 		{
 			pb(a, b);
@@ -68,9 +68,9 @@ void	sort_five(t_stack **a, t_stack **b)
 			exit(1);
 		min_value = min_node->value;
 		if (min_node == find_last_node(*a))
-			rra(a);
+			rra(a, 1);
 		if ((*a)->value > min_value)
-			ra(a);
+			ra(a, 1);
 		else
 		{
 			pb(a, b);

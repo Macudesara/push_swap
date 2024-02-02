@@ -19,16 +19,16 @@ void	finish_rotation(t_stack **stack, t_stack *top_node, char stack_name)
 		if (stack_name == 'a')
 		{
 			if (top_node->above_median)
-				ra(stack);
+				ra(stack, 1);
 			else
-				rra(stack);
+				rra(stack, 1);
 		}
 		else if (stack_name == 'b')
 		{
 			if (top_node->above_median)
-				rb(stack);
+				rb(stack, 1);
 			else
-				rrb(stack);
+				rrb(stack, 1);
 		}	
 	}
 }
