@@ -11,11 +11,10 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
 void	set_cheapest(t_stack *b)
 {
-	long			best_match_value;
+	long	best_match_value;
 	t_stack	*best_match_node;
 
 	if (b == NULL)
@@ -33,7 +32,7 @@ void	set_cheapest(t_stack *b)
 	best_match_node->cheapest = true;
 }
 
-void	set_price(t_stack *a, t_stack *b) //how many moves to bring to the top
+void	set_price(t_stack *a, t_stack *b)
 {
 	int	lena;
 	int	lenb;
@@ -100,7 +99,6 @@ void	set_current_position(t_stack *stack)
 		stack = stack->next;
 		node_position++;
 	}
-	//printf("center_line1 %d\n", center_line);
 }
 
 void	ini_nodes(t_stack *a, t_stack *b)

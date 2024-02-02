@@ -11,12 +11,11 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-//#include <stdio.h>
 
 void	create_new_node(t_stack **stack, int num)
 {
 	t_stack	*new_node;
-	t_stack *current;
+	t_stack	*current;
 
 	if (stack == NULL)
 		return ;
@@ -25,38 +24,33 @@ void	create_new_node(t_stack **stack, int num)
 		return ;
 	new_node->next = NULL;
 	new_node->value = num;
-	if (*stack == NULL) // If the stack is empty, the new_node becomes the first node
-		*stack = new_node; 
-	else // If the stack is not empty, find the last node and link the new_node
+	if (*stack == NULL)
+		*stack = new_node;
+	else
 	{
 		current = *stack;
 		while (current->next != NULL)
 			current = current->next;
 		current->next = new_node;
 	}
-	// else
-	// {
-	// 	last_node = rich_last_node(*stack);
-	// 	last_node->next = node;
-	// }
 }
 
 int	check_rep(t_stack *a, int num)
 {
 	if (a == NULL)
 		return (0);
-	while (a) // Loop until the end of stack 'a' is reached
+	while (a)
 	{
-		if (a->value == num) //Check if the current node's value is equal to 'num'
+		if (a->value == num)
 			return (1);
-		a = a->next; //Move to the next node to check for duplicates
+		a = a->next;
 	}
 	return (0);
 }
 
 long	ft_atol(const char *str)
 {
-	int	neg;
+	int		neg;
 	long	res;
 
 	neg = 1;
@@ -84,7 +78,7 @@ int	check_ifnum(char *str)
 {
 	if (!(*str == '+' || *str == '-' || (*str >= '0' && *str <= '9')))
 		return (1);
-	if (*str == '+' || *str == '-' || *str == ' ') 
+	if (*str == '+' || *str == '-' || *str == ' ')
 		str++;
 	if (*str == '\0')
 		return (1);

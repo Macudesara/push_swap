@@ -40,8 +40,8 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 	i = 0;
 	while (ptrsrc[i] && i < dstsize -1)
 	{
-			ptrdest[i] = ptrsrc[i];
-			i++;
+		ptrdest[i] = ptrsrc[i];
+		i++;
 	}
 	ptrdest[i] = '\0';
 	return (len);

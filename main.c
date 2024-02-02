@@ -11,56 +11,6 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
-
-/*int	main()
-{
-	t_stack *a;
-	t_stack *ca;
-	int		i;
-
-	a = NULL;
-	i = 0;
-	create_new_node(&a, -4);
-	create_new_node(&a, 8);
-	create_new_node(&a, 9);
-
-	ca = a;
-	while (i < 5)
-	{
-		ca = a;
-		while (ca)
-		{
-			printf("The node value is %d\n", ca->value);
-			printf("The next node is %d\n\n", (ca->next != NULL) ? ca->next->value : -1);
-			ca = ca->next;
-		}
-		ra(&a);
-		i++;
-	}
-	while (a != NULL)
-    {
-        t_stack *temp = a;
-        a = a->next;
-        free(temp);
-    }
-	return (0);
-}*/
-
-/*void displayStack(t_stack *stack, char stackName)
-{
-	t_stack *current;
-	current = stack;
-	int len = 0;
-	printf("\n");
-	while (current != NULL)
-	{
-        	printf("%d\n", current->value);
-        	current = current->next;
-        	len++;
-    }
-	printf("%c\n\n", stackName);
-}*/
 
 int	main(int argc, char **argv)
 {
@@ -87,7 +37,6 @@ int	main(int argc, char **argv)
 		else
 			algorithm_sort(&a, &b);
 	}
-	//displayStack(a, 'a');
 	free_all(&a, &b, argc, argv);
 	return (0);
 }

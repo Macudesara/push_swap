@@ -53,7 +53,7 @@ void	free_stack(t_stack **stack)
 	}
 	*stack = NULL;
 }
-//exit 1 indica error, mientras que 0 indica que el programa se ejecutoo correctamente
+
 void	ft_error(t_stack **a)
 {
 	free_stack(a);

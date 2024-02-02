@@ -17,7 +17,7 @@ void	pa(t_stack **a, t_stack **b)
 	t_stack	*b_to_a;
 
 	if (*b == NULL)
-        	return ;
+		return ;
 	b_to_a = *b;
 	*b = b_to_a->next;
 	b_to_a->next = *a;
@@ -30,7 +30,7 @@ void	pb(t_stack **a, t_stack **b)
 	t_stack	*a_to_b;
 
 	if (*a == NULL)
-		return ; 
+		return ;
 	a_to_b = *a;
 	*a = a_to_b->next;
 	a_to_b->next = *b;

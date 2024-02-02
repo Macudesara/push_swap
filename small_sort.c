@@ -16,8 +16,9 @@ void	sort_three(t_stack **a)
 {
 	t_stack	*highest_node;
 
-	if (a == NULL || *a == NULL || (*a)->next == NULL || (*a)->next->next == NULL)
-        return;
+	if (a == NULL || *a == NULL || (*a)->next == NULL
+		|| (*a)->next->next == NULL)
+		return ;
 	highest_node = find_highest_node(*a);
 	if (*a == highest_node)
 		ra(a, 1);
@@ -26,6 +27,7 @@ void	sort_three(t_stack **a)
 	if ((*a)->value > (*a)->next->value)
 		sa(*a);
 }
+
 void	sort_four(t_stack **a, t_stack **b)
 {
 	t_stack	*min_node;
@@ -82,10 +84,10 @@ void	sort_five(t_stack **a, t_stack **b)
 	pa(a, b);
 }
 
-void small_sort(t_stack **a, t_stack **b)
+void	small_sort(t_stack **a, t_stack **b)
 {
-    if (stack_len(*a) == 3)
-        sort_three(a);
+	if (stack_len(*a) == 3)
+		sort_three(a);
 	else if (stack_len(*a) == 4)
 		sort_four(a, b);
 	else if (stack_len(*a) == 5)

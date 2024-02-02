@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
 void	algorithm_sort(t_stack **a, t_stack **b)
 {
@@ -22,15 +21,10 @@ void	algorithm_sort(t_stack **a, t_stack **b)
 	while (lena-- > 3)
 		pb(a, b);
 	sort_three(a);
-	// printf("Ha salido del sort_three\n");
-	// displayStack(*a, 'a');
-	// displayStack(*b, 'b');
 	while (*b)
 	{
 		ini_nodes(*a, *b);
-		//printf("ini_nodes ok\n");
 		move_nodes(a, b);
-		//printf("move_nodes ok\n");
 	}
 	set_current_position(*a);
 	smallest = find_lowest_node(*a);
@@ -40,6 +34,4 @@ void	algorithm_sort(t_stack **a, t_stack **b)
 	else
 		while (*a != smallest)
 			rra(a, 1);
-	//displayStack(*a, 'a');
-	//displayStack(*b, 'b');
 }

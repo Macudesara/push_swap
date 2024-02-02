@@ -35,7 +35,7 @@ typedef struct s_stack
 //void	displayStack(t_stack *stack, char stackName);
 
 // main
-int	main(int argc, char **argv);
+int		main(int argc, char **argv);
 
 // Handle errors & free
 void	free_all(t_stack **a, t_stack **b, int argc, char **argv);
@@ -57,7 +57,7 @@ void	sort_four(t_stack **a, t_stack **b);
 void	sort_five(t_stack **a, t_stack **b);
 
 // Algorithm sort
-void		algorithm_sort(t_stack **a, t_stack **b);
+void	algorithm_sort(t_stack **a, t_stack **b);
 
 // Iniciation nodes
 void	ini_nodes(t_stack *a, t_stack *b);

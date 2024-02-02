@@ -56,13 +56,13 @@ char	ft_printnum(int flag, int n, int lennum, char *str)
 		n = nbyn;
 	}
 	return (*str);
-}	
+}
 
 char	*ft_itoa(int n)
 {
 	char	*str;
-	int	lennum;
-	int	flag;
+	int		lennum;
+	int		flag;
 
 	flag = 0;
 	lennum = ft_lenn(n);

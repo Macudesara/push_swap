@@ -14,7 +14,6 @@
 
 int	stack_sorted(t_stack *a)
 {
-	//printf("Ha entrado a stack_sorted\n");
 	if (!a)
 		return (1);
 	while (a->next != NULL)
@@ -40,13 +39,11 @@ int	stack_len(t_stack *stack)
 	int	count;
 
 	count = 0;
-	//printf("Ha entrado a stack_len\n");
 	while (stack)
 	{
 		stack = stack->next;
 		count++;
 	}
-	//printf("Len = %d\n", count);
 	return (count);
 }
 
@@ -75,7 +72,6 @@ t_stack	*find_lowest_node(t_stack *node)
 	long	min;
 	t_stack	*min_node;
 
-	//printf("Entro a la funcion find_lowest_node\n");
 	if (node == NULL)
 		return (NULL);
 	min = LONG_MAX;

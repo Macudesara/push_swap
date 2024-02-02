@@ -29,7 +29,7 @@ void	finish_rotation(t_stack **stack, t_stack *top_node, char stack_name)
 				rb(stack, 1);
 			else
 				rrb(stack, 1);
-		}	
+		}
 	}
 }
 
